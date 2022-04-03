@@ -9,37 +9,33 @@
 
 body {
     background-color: #011F3F;
-    margin: 0 auto;
     text-align: center;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Title */
 h1 {
     color: #FEF2BF;
     font-family: 'Press Start 2P', cursive;
-    font-size: 2rem;
-    margin: 2em 0;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 4rem auto;
+    line-height: 1.8;
 }
 
 /* Boxes */
-.container {
-    display: block;
-    width: auto;
-}
+
 
 .btn {
     border: .5em solid black;
     border-radius: 20%;
-    display: inline-block;
-    width: 225px;
-    height: 225px;
-    margin: 0 2em 2em 2em;
-}
-
-.row {
-    clear: both;
+    width: 100px;
+    height: 100px;
+    margin: 0 0 1.5rem;
 }
 
 .green {
@@ -69,4 +65,34 @@ h1 {
 .game-over {
     background-color: red;
     opacity: 0.8;
+}
+
+@media screen and (min-width: 500px) {
+    h1 {
+        font-size: 2rem;
+        max-width: 50%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn {
+        width: 175px;
+        height: 175px;
+        margin: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .btn {
+        width: 200px;
+        height: 200px;
+        margin: 4rem;
+    }
 }
